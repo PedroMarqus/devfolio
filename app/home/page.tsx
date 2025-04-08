@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -40,7 +41,7 @@ export default function Portfolio() {
             <div className="flex flex-col items-center text-center">
               <Badge className="mb-4 bg-rose-100 text-rose-700 hover:bg-rose-100">Available for work</Badge>
               <h1 className="text-4xl font-bold tracking-tight text-slate-800 md:text-6xl mb-6">
-                Hi, I'm <span className="text-rose-500">Sarah</span>
+                Hi, I&apos;m <span className="text-rose-500">Sarah</span>
               </h1>
               <p className="max-w-[600px] text-slate-600 md:text-xl mb-8">
                 A product designer and frontend developer crafting beautiful digital experiences with a focus on
@@ -107,12 +108,12 @@ export default function Portfolio() {
               <div className="md:w-1/2">
                 <h2 className="text-3xl font-bold text-slate-800 mb-6">About Me</h2>
                 <p className="text-slate-600 mb-4">
-                  I'm a passionate designer and developer with over 5 years of experience creating digital products that
+                  I&apos;m a passionate designer and developer with over 5 years of experience creating digital products that
                   users love. My approach combines aesthetic sensibility with technical expertise to build solutions
                   that are both beautiful and functional.
                 </p>
                 <p className="text-slate-600 mb-6">
-                  When I'm not designing or coding, you can find me exploring nature trails, experimenting with new
+                  When I&apos;m not designing or coding, you can find me exploring nature trails, experimenting with new
                   recipes, or attending local tech meetups.
                 </p>
                 <div className="flex gap-4">
@@ -184,7 +185,7 @@ export default function Portfolio() {
         <div className="container px-4 mx-auto md:px-6">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <p className="text-sm text-slate-500">
-              © {new Date().getFullYear()} Sarah's Portfolio. All rights reserved.
+              © {new Date().getFullYear()} Sarah&apos;s Portfolio. All rights reserved.
             </p>
             <div className="flex gap-4">
               <Link href="#" className="text-sm text-slate-500 hover:text-rose-500 transition-colors">
@@ -201,8 +202,15 @@ export default function Portfolio() {
   )
 }
 
-// Project Card Component
-function ProjectCard( {project} : {project: any}) {
+// Tipagens corrigidas aqui:
+type Project = {
+  title: string
+  description: string
+  image: string
+  tags: string[]
+}
+
+function ProjectCard({ project }: { project: Project }) {
   return (
     <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg group">
       <div className="relative aspect-video bg-slate-100 overflow-hidden">
@@ -215,7 +223,7 @@ function ProjectCard( {project} : {project: any}) {
       </div>
       <CardContent className="p-6">
         <div className="flex gap-2 mb-3">
-          {project.tags.map(({tag, index } : {tag: any, index : any}) => (
+          {project.tags.map((tag, index) => (
             <Badge key={index} variant="secondary" className="bg-slate-100 text-slate-700 hover:bg-slate-100">
               {tag}
             </Badge>
@@ -236,14 +244,13 @@ function ProjectCard( {project} : {project: any}) {
   )
 }
 
-// Skill Card Component
-function SkillCard({ title, skills }: { title: any; skills: any }) {
+function SkillCard({ title, skills }: { title: string; skills: string[] }) {
   return (
     <Card className="transition-all duration-300 hover:shadow-md">
       <CardContent className="p-6">
         <h3 className="text-xl font-semibold text-slate-800 mb-4">{title}</h3>
         <div className="flex flex-wrap gap-2">
-          {skills.map((skill:any , index :any) => (
+          {skills.map((skill, index) => (
             <Badge key={index} className="bg-white text-slate-700 border border-slate-200 hover:bg-white">
               {skill}
             </Badge>
@@ -254,8 +261,7 @@ function SkillCard({ title, skills }: { title: any; skills: any }) {
   )
 }
 
-// Sample project data
-const projects = [
+const projects: Project[] = [
   {
     title: "E-commerce Redesign",
     description:
