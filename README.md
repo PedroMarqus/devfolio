@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Devfolio – Modern Portfolio Template (Next.js + Tailwind CSS)
 
-## Getting Started
+A clean, responsive, and easy-to-customize portfolio template built with **Next.js** and **Tailwind CSS**.  
+Perfect for developers, designers, and students who want to showcase their work professionally.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🔍 What You Get
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- A **modern portfolio template** built with **Next.js + Tailwind CSS**
+- **Fully responsive design** for all screen sizes
+- **Dark mode** included by default
+- **Clean and minimal UI**, following modern design standards
+- **Beginner-friendly code** – easy to understand and customize
+- **Quick deployment** with Vercel (instructions below)
+- **Editable source files** (no locked components)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Features
 
-## Learn More
+- 🔥 Modern UI following UX best practices  
+- 🌙 Built-in **Dark Mode**  
+- 📱 100% **Responsive Design**  
+- ⚡ **Fast deployment** with [Vercel](https://vercel.com)  
+- 🧩 Clean and beginner-friendly code  
+- 🛠️ Easy to customize with Tailwind utility classes  
+- 📁 Editable source files included  
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 👤 Ideal For
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Beginner developers
+- Tech students
+- UX/UI designers
+- Freelancers building a professional online presence
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📦 Folder Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Devfolio/ ├── public/ ├── pages/ ├── components/ ├── styles/ ├── tailwind.config.js ├── postcss.config.js ├── package.json ├── README.md └── ...
+
+---
+
+## 🧑‍💻 Getting Started
+
+### 1. Clone or download the project
+
+You're using the `.zip` version, unzip it.
+
+### 2. Install dependencies
+
+Make sure you have Node.js and npm installed. Then run: 
+
+`npm install` or `npm i`
+
+Then start the development server:
+
+`npm run dev`
+
+Access the template at: http://localhost:3000
+
+## Bonus
+
+🚀 Deploy on Vercel
+Go to vercel.com
+
+Import your GitHub repository or upload the project folder manually
+
+Click Deploy
+
+Vercel automatically detects Next.js and handles the configuration for you.
+
+🎨 Customization Tips
+Update your name, bio, links, and projects inside the components or JSON files (depending on your setup)
+
+Modify the Tailwind config (tailwind.config.js) to change colors, fonts, etc.
+
+Add or remove sections/components based on your needs
+
+📄 License
+This project is for personal and commercial use by the buyer.
+Do not resell or redistribute this template without permission.
+
+Made with ❤️ by Pedro Henrique Araújo Marques da Silva
+
+
